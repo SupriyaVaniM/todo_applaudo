@@ -9,13 +9,13 @@ class CustomfloatingButton extends StatelessWidget {
   }) : super(key: key);
   final VoidCallback? onPressed;
   final Widget? child;
-  
 
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
       onPressed: onPressed,
       backgroundColor: ThemeColors.blue,
-      child: child,);
+      child: child,
+    );
   }
 }

@@ -5,17 +5,11 @@ import 'package:todo_applaudo/ui/style/theme_color.dart';
 class CustomListTile extends StatelessWidget {
   final String title;
   final String subtitle;
-
   final bool disabled;
-
   final ValueChanged<bool?>? onChanged;
-
   final Color? fillColor;
-
   final Color? checkColor;
-
   final bool value;
-
   final Widget? titleWidget;
 
   const CustomListTile({
@@ -49,7 +43,7 @@ class CustomListTile extends StatelessWidget {
               textDirection: TextDirection.ltr,
             );
             textPainter.layout(
-              maxWidth: size.maxWidth - 80,
+              maxWidth: size.maxWidth - 60,
             );
             return MaterialButton(
               onPressed: disabled
@@ -58,23 +52,23 @@ class CustomListTile extends StatelessWidget {
                       onChanged?.call(checked);
                       isChecked.value = checked ? false : true;
                     },
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(12),
               child: Row(
                 crossAxisAlignment: textPainter.didExceedMaxLines
                     ? CrossAxisAlignment.start
                     : CrossAxisAlignment.center,
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(
+                    padding: const EdgeInsets.only(
                       right: 16,
                     ),
                     child: SizedBox(
-                      width: 18,
-                      height: 18,
+                      width: 8,
+                      height: 8,
                       child: Checkbox(
                         side: MaterialStateBorderSide.resolveWith(
-                          (states) =>
-                              BorderSide(width: 1.0, color: ThemeColors.ghost),
+                          (states) => const BorderSide(
+                              width: 1.0, color: ThemeColors.ghost),
                         ),
                         checkColor: checkColor ?? ThemeColors.comet,
                         fillColor: MaterialStateProperty.all<Color>(
