@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_applaudo/ui/views/get_task_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
      
         primarySwatch: Colors.blue,
       ),
-      home:  Container()
+      home:  const GetTaskPage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
