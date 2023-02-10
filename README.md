@@ -1,16 +1,37 @@
 # todo_applaudo
+A mobile app to manage everyday todo's.
 
-A new Flutter project.
+#Target platforms
+Android and IOS
 
-## Getting Started
+#Versions
+Flutter 3.7.1
+Xcode 14.0.1
+Android Studio (version 2022.1) - Electric eel
+Android SDK version 32.1.0-rc1
+VS Code (version 1.68.1)
+IntelliJ IDEA Community Edition (version 2021.3.2)
 
-This project is a starting point for a Flutter application.
+#Plugins
+ table_calendar: ^3.0.9
+ dio: ^4.0.6
+ json_annotation: ^4.8.0
+ analyzer: ^5.4.0
+ flutter_bloc: ^8.1.2
+ 
+ #Architecture
+ MVVM
+ 
+ #StateManagement
+ Flutter-Bloc
+ 
+ #Screens
+ Home Page - Displays Completed and Incompleted tasks
+ Add task Page - Adds new tasks
+ 
+ 
+ 
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
