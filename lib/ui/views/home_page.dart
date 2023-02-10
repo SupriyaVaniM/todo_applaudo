@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:table_calendar/table_calendar.dart';
-import 'package:todo_applaudo/bloc/auth_bloc/auth_token_bloc.dart';
-import 'package:todo_applaudo/bloc/auth_bloc/auth_token_event.dart';
-import 'package:todo_applaudo/bloc/auth_bloc/auth_token_state.dart';
+import 'package:todo_applaudo/core/bloc/auth_bloc/auth_token_bloc.dart';
+import 'package:todo_applaudo/core/bloc/auth_bloc/auth_token_event.dart';
+import 'package:todo_applaudo/core/bloc/auth_bloc/auth_token_state.dart';
 import 'package:todo_applaudo/core/models/todo_item.dart';
 import 'package:todo_applaudo/ui/style/inter_style.dart';
 import 'package:todo_applaudo/ui/style/theme_color.dart';

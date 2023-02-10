@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:todo_applaudo/bloc/auth_bloc/auth_token_bloc.dart';
-import 'package:todo_applaudo/bloc/todo_bloc/todo_bloc.dart';
+import 'package:todo_applaudo/core/bloc/auth_bloc/auth_token_bloc.dart';
+import 'package:todo_applaudo/core/bloc/todo_bloc/todo_bloc.dart';
 import 'ui/views/home_page.dart';
 
 void main() {

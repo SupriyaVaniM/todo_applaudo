@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:todo_applaudo/core/models/todo_item.dart';
 import 'todo_event.dart';
-import '../../core/repository/todo_repository.dart';
+import '../../repository/todo_repository.dart';
 import 'todo_state.dart';
 
 class TodoBloc extends Bloc<FetchTodoEvent, TodoState> {
