@@ -22,7 +22,7 @@ class CompleteTask extends StatelessWidget {
             title: todos[i].fields.name?.stringValue ??
                 todos[i].fields.id?.stringValue ??
                 "",
-            subtitle: todos[i].createTime,
+            subtitle: " " ,//todos[i].createTime,
             onChanged: (value) {
               debugPrint(todos[i].updateTime);
             },
