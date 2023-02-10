@@ -20,6 +20,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
     });
     Navigator.pop(context);
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,23 +32,19 @@ class _AddTaskPageState extends State<AddTaskPage> {
           const SizedBox(
             height: 10,
           ),
-         
           const Divider(
               thickness: 1,
               height: 0,
               indent: 24,
               endIndent: 24,
               color: ThemeColors.dividerColor),
-               const SizedBox(
-              height: 18,
-            ),
-           
-            _buildTaskTile(),
-            _buildCategory(),
-            _buildListTile(),
-             
-         
-            _buildButton()
+          const SizedBox(
+            height: 18,
+          ),
+          _buildTaskTile(),
+          _buildCategory(),
+          _buildListTile(),
+          _buildButton()
         ],
       ),
     );
@@ -80,60 +77,61 @@ class _AddTaskPageState extends State<AddTaskPage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [_buildBackButton(), _buildNewTask()],
       );
-      Widget _buildButton() => Center(
+  Widget _buildButton() => Center(
         child: CustomButton(
-          onPressed: (){ },
+          onPressed: () {},
           child: Text('Add'),
         ),
       );
-      Widget _buildListTile() => Padding(
-              padding: EdgeInsets.all(18.0),
-              child: ListTile(
-                shape: Border(
-                  bottom: BorderSide(color:ThemeColors.licorise)
-                ),
-                tileColor: ThemeColors.textFieldColor,
-               title: Text('When?',style:TextStyle(color: ThemeColors.blue) ,),
-               subtitle: Text(today!.toString().split(" ")[0]),
-               trailing: IconButton(color: ThemeColors.blue, icon: Icon(Icons.calendar_today), onPressed: () { 
-                 showDialog(
-            context: context,
-            builder: (_) => Dialog(
-                  child: _buildCalendar(),
-                ));
-                },),
-               ),
-            );
-            Widget _buildCategory() =>   const Padding(
-              padding: EdgeInsets.all(18.0),
-              child: TextField(
-                keyboardType: TextInputType.multiline,
-                decoration: InputDecoration(
-                  contentPadding: EdgeInsets.only(top: 28,left:18,bottom: 28),
-                filled: true,
-                fillColor: ThemeColors.textFieldColor,
-                hintText: 'Category',
-                border: UnderlineInputBorder(
-                
-                )
-              ),),
-            );
-            Widget _buildTaskTile() =>  const Padding(
-              padding: EdgeInsets.all(18.0),
-              child: TextField(
-                keyboardType: TextInputType.multiline,
-                decoration: InputDecoration(
-                contentPadding: EdgeInsets.only(top: 28,left:18,bottom: 28),
-                filled: true,
-                fillColor: ThemeColors.textFieldColor,
-                hintText: 'Title',
-                border: UnderlineInputBorder(
-                
-                )
-              ),),
-            );
+  Widget _buildListTile() => Padding(
+        padding: EdgeInsets.all(18.0),
+        child: ListTile(
+          shape: Border(bottom: BorderSide(color: ThemeColors.licorise)),
+          tileColor: ThemeColors.textFieldColor,
+          title: Text(
+            'When?',
+            style: TextStyle(color: ThemeColors.blue),
+          ),
+          subtitle: Text(today!.toString().split(" ")[0]),
+          trailing: IconButton(
+            color: ThemeColors.blue,
+            icon: Icon(Icons.calendar_today),
+            onPressed: () {
+              showDialog(
+                  context: context,
+                  builder: (_) => Dialog(
+                        child: _buildCalendar(),
+                      ));
+            },
+          ),
+        ),
+      );
+  Widget _buildCategory() => const Padding(
+        padding: EdgeInsets.all(18.0),
+        child: TextField(
+          keyboardType: TextInputType.multiline,
+          decoration: InputDecoration(
+              contentPadding: EdgeInsets.only(top: 28, left: 18, bottom: 28),
+              filled: true,
+              fillColor: ThemeColors.textFieldColor,
+              hintText: 'Category',
+              border: UnderlineInputBorder()),
+        ),
+      );
+  Widget _buildTaskTile() => const Padding(
+        padding: EdgeInsets.all(18.0),
+        child: TextField(
+          keyboardType: TextInputType.multiline,
+          decoration: InputDecoration(
+              contentPadding: EdgeInsets.only(top: 28, left: 18, bottom: 28),
+              filled: true,
+              fillColor: ThemeColors.textFieldColor,
+              hintText: 'Title',
+              border: UnderlineInputBorder()),
+        ),
+      );
 
-Widget _buildCalendar() {
+  Widget _buildCalendar() {
     return Center(
       child: TableCalendar(
         headerStyle: const HeaderStyle(
@@ -162,12 +160,11 @@ Widget _buildCalendar() {
         selectedDayPredicate: (day) => (isSameDay(day, today)),
         startingDayOfWeek: StartingDayOfWeek.sunday,
         calendarStyle: const CalendarStyle(
-        selectedDecoration: BoxDecoration(
+            selectedDecoration: BoxDecoration(
           shape: BoxShape.circle,
           color: Colors.blue,
         )),
       ),
     );
   }
-            
 }

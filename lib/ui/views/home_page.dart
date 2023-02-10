@@ -140,6 +140,7 @@ class _HomePageState extends State<HomePage> {
       child: TableCalendar(
         headerStyle: const HeaderStyle(
             leftChevronIcon: Icon(
+              
               Icons.chevron_left,
               color: ThemeColors.licorise,
               size: 28,
