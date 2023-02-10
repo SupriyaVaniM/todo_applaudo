@@ -43,7 +43,7 @@ class CustomListTile extends StatelessWidget {
               textDirection: TextDirection.ltr,
             );
             textPainter.layout(
-              maxWidth: size.maxWidth - 60,
+              maxWidth: size.maxWidth - 80,
             );
             return MaterialButton(
               onPressed: disabled

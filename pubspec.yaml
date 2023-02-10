@@ -13,6 +13,10 @@ dependencies:
   flutter:
     sdk: flutter
   table_calendar: ^3.0.9
+  dio: ^4.0.6
+  json_annotation: ^4.8.0
+  analyzer: ^5.4.0
+
 
   cupertino_icons: ^1.0.2
 
