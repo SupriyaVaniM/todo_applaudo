@@ -132,38 +132,41 @@ class _AddTaskPageState extends State<AddTaskPage> {
       );
 
   Widget _buildCalendar() {
-    return Center(
-      child: TableCalendar(
-        headerStyle: const HeaderStyle(
-            leftChevronIcon: Icon(
-              Icons.chevron_left,
-              color: ThemeColors.licorise,
-              size: 28,
-            ),
-            rightChevronIcon: Icon(
-              Icons.chevron_right,
-              color: ThemeColors.licorise,
-              size: 28,
-            ),
-            formatButtonVisible: false,
-            titleCentered: true),
-        daysOfWeekStyle: const DaysOfWeekStyle(
-          weekdayStyle: TextStyle(color: ThemeColors.licorise),
-          weekendStyle: TextStyle(color: ThemeColors.licorise),
+    return Container(
+      height: 400,
+      child: Center(
+        child: TableCalendar(
+          headerStyle: const HeaderStyle(
+              leftChevronIcon: Icon(
+                Icons.chevron_left,
+                color: ThemeColors.licorise,
+                size: 28,
+              ),
+              rightChevronIcon: Icon(
+                Icons.chevron_right,
+                color: ThemeColors.licorise,
+                size: 28,
+              ),
+              formatButtonVisible: false,
+              titleCentered: true),
+          daysOfWeekStyle: const DaysOfWeekStyle(
+            weekdayStyle: TextStyle(color: ThemeColors.licorise),
+            weekendStyle: TextStyle(color: ThemeColors.licorise),
+          ),
+          focusedDay: today!,
+          firstDay: DateTime.utc(2022, 10, 11),
+          lastDay: DateTime.utc(2024, 10, 11),
+          locale: 'en_US',
+          availableGestures: AvailableGestures.all,
+          onDaySelected: _onDaySelected,
+          selectedDayPredicate: (day) => (isSameDay(day, today)),
+          startingDayOfWeek: StartingDayOfWeek.sunday,
+          calendarStyle: const CalendarStyle(
+              selectedDecoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: Colors.blue,
+          )),
         ),
-        focusedDay: today!,
-        firstDay: DateTime.utc(2022, 10, 11),
-        lastDay: DateTime.utc(2024, 10, 11),
-        locale: 'en_US',
-        availableGestures: AvailableGestures.all,
-        onDaySelected: _onDaySelected,
-        selectedDayPredicate: (day) => (isSameDay(day, today)),
-        startingDayOfWeek: StartingDayOfWeek.sunday,
-        calendarStyle: const CalendarStyle(
-            selectedDecoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: Colors.blue,
-        )),
       ),
     );
   }
