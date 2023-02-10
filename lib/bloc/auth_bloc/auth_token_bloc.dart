@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:todo_applaudo/core/models/auth_token.dart';
 
 import 'auth_token_event.dart';
-import 'auth_token_repository.dart';
+import '../../core/repository/auth_token_repository.dart';
 import 'auth_token_state.dart';
 
 class AuthTokenBloc extends Bloc<FetchAutTokenEvent, AuthTokenState> {
